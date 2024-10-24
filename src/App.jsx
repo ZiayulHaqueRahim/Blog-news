@@ -1,6 +1,7 @@
 
 import './App.css'
 import Blogs from './components/Blogs/blogs'
+import Bookmarks from './components/Bookmarks/bookmarks'
 import Header from './components/Header/header'
 
 function App() {
@@ -9,7 +10,10 @@ function App() {
   return (
     <>
      <Header></Header>
-      <Blogs></Blogs>
+      <main className='md:flex md:container justify-between items-center mx-4 px-5'>
+        <Blogs></Blogs>
+        <Bookmarks></Bookmarks>
+      </main>
 
 
     </>
