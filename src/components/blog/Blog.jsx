@@ -1,9 +1,9 @@
 
-const Blog = ({blog}) => {
+const Blog = ({blog,handleAddToBookmarks}) => {
     const {title,cover,author,author_image,reading_time,posted_date,hashtags} = blog;
     return (
-        <div>
-            <img src={blog.cover} alt={`cover picture of the title ${title}`}></img> 
+        <div className="mb-20">
+            <img class='max-w-full max-h-[700px] mb-8' src={blog.cover} alt={`cover picture of the title ${title}`}></img> 
             <div className="flex justify-between ">
                 <div className="flex ">
                     <img  className="w-14 rounded-full py-3" src={author_image} ></img>
@@ -14,6 +14,7 @@ const Blog = ({blog}) => {
                 </div>
                 <div>
                     <span className="text-gray-500">{reading_time} min read</span>
+                    <button className="text- border-teal-100 text-orange-600" onClick={() => handleAddToBookmarks(blog)}>Bookmark</button>
                 </div>
             </div>
             <h2 className="text-4xl">{title}</h2>
